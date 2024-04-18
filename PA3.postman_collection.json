@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "1cc28c6c-039f-4c44-a610-9d081b8e9344",
+		"name": "PA3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32456037"
+	},
+	"item": [
+		{
+			"name": "Get all (no users yet)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add User 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Raahi Menon\",\n    \"username\": \"raahi014\",\n    \"balance\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/user/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add User 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Joe Mama\",\n    \"username\": \"joemama123\",\n    \"balance\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add User 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Joe Wonka\",\n    \"username\": \"WillyWonka\",\n    \"balance\": 31\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all (3 users)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User 2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/user/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get remaining users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Send 1 dollar transfer from user 1 to user 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender_id\": 1,\n    \"receiver_id\": 3,\n    \"amount\": 1,\n    \"message\": \"user1 should have 1 dollar, user3 should have 32\",\n    \"accepted\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/transactions/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user1 balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/user/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "get user3 balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/user/3/"
+			},
+			"response": []
+		},
+		{
+			"name": "Null 5 dollar transfer from user3 to user1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender_id\": 3,\n    \"receiver_id\": 1,\n    \"amount\": 5,\n    \"message\": \"This is just null\",\n    \"accepted\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/transactions/"
+			},
+			"response": []
+		},
+		{
+			"name": "User 1 updated",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/user/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "User 3 updated",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/user/3/"
+			},
+			"response": []
+		},
+		{
+			"name": "Accepting transaction 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"accepted\" : true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/transactions/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "User 1 5 more",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/user/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "User 1 5 less",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/user/3/"
+			},
+			"response": []
+		},
+		{
+			"name": "Part II Null 5 dollar transfer from user3 to user1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender_id\": 3,\n    \"receiver_id\": 1,\n    \"amount\": 5,\n    \"message\": \"Nothing will change this time\",\n    \"accepted\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/transactions/"
+			},
+			"response": []
+		},
+		{
+			"name": "Rejecting transaction 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"accepted\" : true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/transactions/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "User 1 Same as before",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/user/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "User 3 same as before",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/user/3/"
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Table to Empty for graders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/reset/"
+			},
+			"response": []
+		}
+	]
+}
